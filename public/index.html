@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-white">
+    
     <!-- Navbar begins here -->
     <nav class="bg-gray-800 h-20 mx-4 rounded-xl">
       <div class="flex justify-between items-center h-full">
@@ -25,7 +26,7 @@
     </nav>
     <!-- Navbar ends here -->
 
-    <!-- Main content begins here -->
+    <!-- Main content begins here --> 
     <section class="bg-slate-400 h-auto pb-6 mx-7" id="container1">
 
         <div class="mx-10 h-auto bg-yellow-600" id="conatiner2">
@@ -34,163 +35,164 @@
                 <p class="text-lg text-white">Discover the world of movies</p>
             </div>
 
-            <div class="grid grid-cols-3     gap-10 border-spacing-2   p-8">
+            <div id="movie-list" class="grid grid-cols-3     gap-10 border-spacing-2   p-8">
                 <div class="flex flex-col items-center bg-slate-800 rounded-xl p-10 text-white">
-        <img src="https://www.gstatic.com/tv/thumb/v22vodart/2157/p2157_v_v8_ab.jpg " alt="dango 1" class="w-24 h-24 " />
+                   <img src="https://www.gstatic.com/tv/thumb/v22vodart/2157/p2157_v_v8_ab.jpg " alt="dango 1" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2"> The Giant Gila Monster</h2>
                     <h3>Runtime:108</h3>
                     <h3>Capacity:30</h3>
                     <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
                     <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse bg-blue-800   text-white rounded-xl p-2 mt-6" >Purchase Ticket</button>
+                    <button id="purchase-ticket"  class="border-collapse bg-blue-800  text-white rounded-xl p-2 mt-6" >Purchase Ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/47781/p47781_v_v8_ac.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Manos: The Hands Of Fate</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6" >Purchase ticket</button>
+                    <h3>Runtime:118</h3>
+                    <h3>Capacity:50</h3>
+                    <h3>Showtime : 6.45 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A family gets lost on the road and stumbles upon a hidden, underground, devil-worshiping cult led by the fearsome Master and his servant Torgo.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6" >Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/23342/p23342_v_v8_ab.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Time Chasers</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Runtime:93</h3>
+                    <h3>Capacity:50</h3>
+                    <h3>Showtime : 9.30 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">An inventor comes up with a time machine, but must prevent its abuse at the hands of an evil C.E.O.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/43468/p43468_v_v8_aa.jpg   " alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2"> The Touch Of Satan</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Runtime:101</h3>
+                    <h3>Capacity:40</h3>
+                    <h3>Showtime : 9.00 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A young man meets a farm girl who is actually a witch</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/4232/p4232_v_v8_aa.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Santa Claus Conquers The Martians</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6" >Purchase ticket</button>
+                    <h3>Runtime:96</h3>
+                    <h3>Capacity:50</h3>
+                    <h3>Showtime : 3.50 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">The Martians kidnap Santa Claus because there is nobody on Mars to give their children presents.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6" >Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/39804/p39804_v_v8_ab.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Track Of The Moon Beast</h2>
-                    <h3>Runtime:108</h3>
+                    <h3>Runtime:112</h3>
                     <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2">Purchase ticket</button>
+                    <h3>Showtime : 10.20 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/40518/p40518_v_v8_aa.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">The Skydivers</h2>
-                    <h3>Runtime:108</h3>
+                    <h3>Runtime:93</h3>
                     <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2">Purchase ticket</button>
+                    <h3>Showtime : 7.30 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A woman seeks revenge on her former lover, who owns a skydiving business.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/1466/p1466_v_v8_ab.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">The Killer Shrews</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2">Purchase ticket</button>
+                    <h3>Runtime:115</h3>
+                    <h3>Capacity:40</h3>
+                    <h3>Showtime : 8.30 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">On an isolated island, a small group of people are terrorized by giant voracious shrews in the midst of a hurricane.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6 ">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/46755/p46755_v_v8_aa.jpg" alt="dango 2" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Project Moon Base</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Runtime:99</h3>
+                    <h3>Capacity:40</h3>
+                    <h3>Showtime : 8.30 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A saboteur posing as a scientist strives to destroy the world's first space station</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/42171/p42171_v_v8_ab.jpg" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2"> The Giant Spider Invasion</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Runtime:112</h3>
+                    <h3>Capacity:50</h3>
+                    <h3>Showtime : 10.00 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">iant spiders from another dimension invade Wisconsin</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/58122/p58122_v_v8_aa.jpg" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Catalina Caper</h2>
-                    <h3>Runtime:108</h3>
+                    <h3>Runtime:104</h3>
                     <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Showtime : 6.00 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A group of swingin' teens take time out from having fun in the sun to try to foil a group of crooks searching for a stolen scroll.</p>
+                    <button id="purchase-ticket" class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/93417/p93417_v_v8_aa.jpg" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Secret Agent Super Dragon</h2>
-                    <h3>Runtime:108</h3>
+                    <h3>Runtime:104</h3>
                     <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Showtime : 7.00 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A series of murders in Michigan lead an American secret agent to Amsterdam, where he uncovers a plot to imperil the world with a potent new drug..</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/45367/p45367_v_v8_aa.jpg" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Wild Rebels</h2>
-                    <<h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <<h3>Runtime:100</h3>
+                    <h3>Capacity:40</h3>
+                    <h3>Showtime : 9.00 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">A stock car driver goes undercover as the wheel man for a motorcycle gang..</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6 " >Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/11850/p11850_v_v8_aa.jpg" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Danger: Diabolik</h2>
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Runtime:111</h3>
+                    <h3>Capacity:50</h3>
+                    <h3>Showtime : 8.00 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">International man of mystery Diabolik and his lover pull off heist after heist, all while European cops led by Inspector Ginko and envious mobsters led by Ralph Valmont are closing in on them.</p>
+                    <button id="purchase-ticket"  class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
                 <div class="flex flex-col items-center  bg-slate-800 rounded-xl p-10 text-white">
                     <img src="https://www.gstatic.com/tv/thumb/v22vodart/37991/p37991_v_v8_aa.jpg" class="w-24 h-24 " />
                     <h2 class="text-xl font-bold text-white mt-2">Village Of The Giants</h2>
                     
-                    <h3>Runtime:108</h3>
-                    <h3>Capacity:30</h3>
-                    <h3>Showtime : 4.00 p.m</h3>
-                    <h3 id="tickets">tickets_sold:27</h3>
-                    <p class="text-sm text-white text-center font-semibold">A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.</p>
-                    <button class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
+                    <h3>Runtime:98</h3>
+                    <h3>Capacity:50</h3>
+                    <h3>Showtime : 4.45 p.m</h3>
+                    <h3>Tickets available: <span id="tickets"></span></h3> 
+                    <p class="text-sm text-white text-center font-semibold">Delinquent teen-agers ingest a substance and grow thirty feet tall, then proceed to take over a small town.</p>
+                    <button id="purchase-ticket" class="border-collapse  bg-blue-800 text-white rounded-xl p-2 mt-6">Purchase ticket</button>
                 </div>
            
         </div>
         
 
     </section>
-    <div class="bg-transparent " id="modal"></div>
+    <script src="index.js"></script>
+    
   </body>
 </html>
