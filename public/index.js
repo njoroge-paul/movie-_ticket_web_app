@@ -1,40 +1,51 @@
-// Select all movie lists
-const movieLists = document.querySelectorAll('#movie-list');
+// Selectors
+const movieList = document.getElementById("movie-list");
+const purchaseTicketButtons = document.querySelectorAll("#purchase-ticket");
+const ticketNumberInputs = document.querySelectorAll("#tickets");
 
-// Loop through each movie list
-movieLists.forEach((movieList) => {
-  // Select the purchase ticket button
-  const purchaseButton = movieList.querySelector('button');
 
-  // Select the tickets available span
-  const ticketsAvailableSpan = movieList.querySelector('h3 span');
+function fetchMovieData() {
+  return fetch('http://localhost:3000/films')
+    .then(response => response.json())
+    .then(data => data.movies);
+};
 
-  // Get the initial number of tickets available
-  let ticketsAvailable = parseInt(ticketsAvailableSpan.textContent, 10);
 
-  // Add an event listener to the purchase button
-  purchaseButton.addEventListener('click', () => {
-    // Check if there are still tickets available
-    if (ticketsAvailable > 0) {
-      // Decrement the number of tickets available
-      ticketsAvailable--;
 
-      // Update the tickets available span
-      ticketsAvailableSpan.textContent = ticketsAvailable;
 
-      // Display a success message
-      alert(`Ticket booked successfully! ${ticketsAvailable} tickets remaining.`);
+fetchMovieData().then(movies => {
+  movies.forEach(movie => {
+    const movieItem = document.createElement("div");
+    movieItem.className = "movie-item";
+    movieItem.innerHTML = `
+      <h2>${movie.title}</h2>
+      <p>Tickets available: <span id="tickets">${movie.tickets_sold}</span></p>
+      <button id="purchase-ticket">Purchase Ticket</button>
+    `;
+    movieList.appendChild(movieItem);
+  });
 
-      // Disable the purchase button if there are no more tickets available
-      if (ticketsAvailable === 0) {
-        purchaseButton.disabled = true;
+  
+  purchaseTicketButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const movieId = index + 1; // 
+      const currentTicketQuantity = parseInt(ticketNumberInputs[index].textContent);
+      if (currentTicketQuantity > 0) {
+        ticketNumberInputs[index].textContent = currentTicketQuantity - 1;
+        updateMovieData(movieId, currentTicketQuantity - 1);
       }
-
-         
-
-    } else {
-      // Display an error message if there are no more tickets available
-      alert('Sorry, no more tickets available!');
-    }
+    });
   });
 });
+
+
+
+
+
+function updateMovieData(movieId, newTicketQuantity) {
+  return fetch(`http://localhost:3000/films/${movieId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ tickets_sold: newTicketQuantity })
+  });
+};
